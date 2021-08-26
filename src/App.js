@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Item from './Componentes/Item';
+import Card from './Componentes/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () =>{
+  return(
+    <>
+      <div className="container">
+        <div className="d-flex flex-column">
+          <div className="text-center mt-3" >
+            <h1>Minha Aplicação React com a Dev Dio</h1>
+          </div>
+
+          <ul>
+            <Item props="item 1" />   
+            <Item props="item 2" />   
+            <Item props="item 3" />   
+          </ul>
+
+          <Card />
+
+        </div>
+      </div>
+    </>
+  )
 }
+
 
 export default App;
